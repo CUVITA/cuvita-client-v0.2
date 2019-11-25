@@ -1,0 +1,27 @@
+/* pages/antisocial-register/antisocial-register.wxss */
+.meta-wrapper{
+    display: flex;
+    margin-bottom: 5%;
+}
+.meta{
+    width: 60%;
+}
+.title{
+    font-family: Microsoft YaHei;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 79px;
+    text-align: center;
+    color: #D1213E;
+}
+
+.description{
+    font-family: Microsoft YaHei;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #6A6A6A;
+}

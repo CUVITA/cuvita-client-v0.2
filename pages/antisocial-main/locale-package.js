@@ -1,0 +1,1 @@
+export const title = ['限购活动', 'Limited Retail'];

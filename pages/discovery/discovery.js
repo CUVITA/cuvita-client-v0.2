@@ -45,13 +45,15 @@ Page({
     Promise.all([
       promisfy.fetch(`/field/tray/${ alias }`),
       promisfy.fetch(`/field/services`),
-      promisfy.fetch(`/field/banner/${ alias }`),
+      // promisfy.fetch(`/field/banner/${ alias }`),
+      promisfy.fetch(`/field/banner/${ 'assc' }`),
       promisfy.fetch(`/field/recommendation/${ alias }`),
       promisfy.fetch(`/field/feed/${ alias }`)
     ])
       .then(res => {
         for (let index in res[1])
           res[1][index] = { ...res[1][index], ...this.data.services[index] };
+        console.log(res[2]);
         this.setData({
           tray: res[0],
           services: res[1],

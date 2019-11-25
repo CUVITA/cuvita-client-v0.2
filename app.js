@@ -23,6 +23,14 @@ App({
     Store.dispatch(GlobalActions.setMember(wx.getStorageSync('member') || null));
     promisfy.login()
       .then(code => promisfy.fetch(`/dispatch/${ code }`))
+      // Production
+      // .then(({ openid, user, member }) => {
+      //   Store.dispatch(GlobalActions.setUser({ openid, ...user}));
+      //   member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
+      //   wx.hideLoading();
+      // });
+      
+      // Development (屏蔽识别会员by ignore openid)
       .then(({ user, member }) => {
         Store.dispatch(GlobalActions.setUser(user));
         member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());

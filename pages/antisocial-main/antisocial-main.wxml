@@ -1,0 +1,18 @@
+<view class="poster-wrapper fw justify-content-center"> 
+<image class="poster" src="{{src.poster}}" mode="widthFix"/>
+</view>
+<view class=" meta-wrapper fw justify-content-center">
+    <view class="meta justify-content-center">
+        <view class="meta-title-wrapper d-flex-column justify-content-center">
+          <text class="meta-title">Anti Anti Social Club</text>
+          <text class="meta-title">限购活动</text>
+        </view>
+        <view class="meta-description-wrapper">
+          <text class="meta-description">比如会员可以拿两个号的信息，就可以放在这里 可以加入几行详细描述的文字这里可以加入几行详细描述的文字这里可以加入几行详细描述的文字这里可以加入几行详细描述的文字</text>
+        </view>
+      </view>
+</view>
+
+<view class="form-button-wrapper justify-content-center">
+<button class="submit-button" bindtap="goToRegisterPage">立刻抽签</button>
+</view>

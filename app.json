@@ -21,7 +21,10 @@
     "pages/consulting/consulting",
     "pages/job/job",
     "pages/ticket/ticket",
-    "pages/boxoffice/boxoffice"
+    "pages/boxoffice/boxoffice",
+    "pages/antisocial-main/antisocial-main",
+    "pages/antisocial-register/antisocial-register",
+    "pages/antisocial-success/antisocial-success"
   ],
   "window": {
     "backgroundTextStyle": "light",

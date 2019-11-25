@@ -1,0 +1,9 @@
+<view class="meta-wrapper justify-content-center">
+    <view class="meta d-flex-column justify-content-center">
+        <text class="title">请确认您的信息</text>
+        <text class="description">如果中签，在最终付款并且确认订单时需要输入和这些资料所匹配的信息，请务必确认正确</text>
+    </view>
+</view>
+<view class="form">
+    <form fields="{{ fields }}" padding="0" action="{{ localePackage.form.submit[locale] }}" bind:submit="onSubmit"/>
+</view>
