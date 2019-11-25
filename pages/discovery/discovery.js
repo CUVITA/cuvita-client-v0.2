@@ -5,6 +5,8 @@ import palette from '../../config/palette.config';
 import * as localePackage from 'locale-package';
 import * as promisfy from '../../lib/wx.promisfy';
 
+// Commented lines are updates for 0.2.5 server
+
 const { Store, GlobalActions, GlobalLocalePackage } = getApp();
 
 Page({
@@ -24,8 +26,10 @@ Page({
       .then(({ latitude, longitude }) => {
         return promisfy.fetch('/region/nearest', { lat: latitude, long: longitude })
       })
-      .then(region => {
-        region ? Store.dispatch(GlobalActions.setRegion(data)) : wx.showModal({ title: localePackage.modal.noservice.title[this.data.locale], content: localePackage.modal.noservice.content[this.data.locale], showCancel: false, confirmColor: palette.primary });
+      .then(({ data, statusCode }) => {
+        statusCode === 404 ? wx.showModal({ title: localePackage.modal.noservice.title[this.data.locale], content: localePackage.modal.noservice.content[this.data.locale], showCancel: false, confirmColor: palette.primary }) : Store.dispatch(GlobalActions.setRegion(data));
+      // .then(region => {
+      //   region ? Store.dispatch(GlobalActions.setRegion(data)) : wx.showModal({ title: localePackage.modal.noservice.title[this.data.locale], content: localePackage.modal.noservice.content[this.data.locale], showCancel: false, confirmColor: palette.primary });
         this.fetchData();
       })
       .catch(e => { this.fetchData() }) : this.fetchData();
@@ -43,7 +47,7 @@ Page({
   fetchData: function () {
     let { region: { alias } } = Store.getState().global;
     Promise.all([
-      promisfy.fetch(`/field/tray/${ alias }`),
+      // promisfy.fetch(`/field/tray/${ alias }`),
       promisfy.fetch(`/field/services`),
       // promisfy.fetch(`/field/banner/${ alias }`),
       promisfy.fetch(`/field/banner/${ 'assc' }`),
@@ -51,15 +55,20 @@ Page({
       promisfy.fetch(`/field/feed/${ alias }`)
     ])
       .then(res => {
-        for (let index in res[1])
-          res[1][index] = { ...res[1][index], ...this.data.services[index] };
-        console.log(res[2]);
+        for (let index in res[0])
+          res[0][index] = { ...res[0][index], ...this.data.services[index] };
+        // for (let index in res[1])
+        //   res[1][index] = { ...res[1][index], ...this.data.services[index] };
         this.setData({
-          tray: res[0],
-          services: res[1],
-          banner: res[2],
-          recommendations: res[3],
-          feed: res[4]
+          services: res[0],
+          banner: res[1],
+          recommendations: res[2],
+          feed: res[3]
+          // tray: res[0],
+          // services: res[1],
+          // banner: res[2],
+          // recommendations: res[3],
+          // feed: res[4]
         });
       });
   },
