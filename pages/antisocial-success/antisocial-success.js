@@ -21,5 +21,10 @@ Page({
     this.setData({
       locale
     });
+  },
+  goToHomePage:function(param){
+    wx.reLaunch({
+      url: '/pages/discovery/discovery',
+    })
   }
 })

@@ -1,15 +1,22 @@
-<view class="success-info">
-    <image src="{{src.success_icon}}" class="success-icon"/>
-    <text class="success-text">抽签成功！</text>  
-</view>
+<view class="success-info justify-content-center align-items-center">
+    <image src="{{src.success_icon}}" class="success-icon" mode="widthFix"/>
+    <view class="success-text-wrapper">
+        <text class="success-text">抽签成功！</text> 
+    </view> 
+</view> 
 <view class="lotery-number">
-    <view class="lotery-number-1"><text>12-34-56</text></view>
-    <view class="lotery-number-2"><text>23-45-67</text></view>
+    <view class="lotery-number"><text>12-34-56</text></view>
+    <view class="lotery-number"><text>23-45-67</text></view>
 </view>
-<view class="meta">
-    <text>
-        以上为您的签号。系统很快会为您所提供的Email中发送备份。在xxXX年XX月XX日时，我们将会给您发送Email通知您的抽签结果。 谢谢您的参与
-    </text>
+<view class="meta-wrapper justify-content-center">
+    <view class="meta d-flex-column justify-content-center">
+        <text>
+            以上为您的签号。系统很快会为您所提供的Email中发送备份。在xxXX年XX月XX日时，我们将会给您发送Email通知您的抽签结果。 谢谢您的参与
+        </text>
+    </view>
+</view>
+<view class="form-button-wrapper justify-content-center">
+    <button class="button" bindtap="goToHomePage">返回首页</button>
 </view>
 <!-- 联系客服 -->
 <view class="weui-footer" style="padding-bottom: 34px">
