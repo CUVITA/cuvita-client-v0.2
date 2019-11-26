@@ -2,6 +2,8 @@
 import palette from '../../config/palette.config';
 import * as promisfy from '../../lib/wx.promisfy';
 import * as localePackage from 'locale-package';
+import autofiller from '../../utils/form-autofiller';
+
 
 const { Store, GlobalActions, GlobalLocalePackage } = getApp();
 const minimumAge = 16;
@@ -26,57 +28,53 @@ Page({
         [
           { tag: 'van-field', name: 'openid', type: 'text', label: localePackage.form.openid.label[locale], placeholder: localePackage.form.openid.placeholder[locale], required: true },
           { tag: 'van-field', name: 'email', type: 'text', label: localePackage.form.email.label[locale], placeholder: localePackage.form.email.placeholder[locale], required: true , is: 'email'},
-          { tag: 'van-field', name: 'lastname', type: 'text', label: localePackage.form.lastname.label[locale], placeholder: localePackage.form.lastname.placeholder[locale], required: true },
-          { tag: 'van-field', name: 'firstname', type: 'text', label: localePackage.form.firstname.label[locale], placeholder: localePackage.form.firstname.placeholder[locale], required: true },
+          { tag: 'van-field', name: 'name', type: 'text', label: localePackage.form.name.label[locale], placeholder: localePackage.form.name.placeholder[locale], required: true },
           { tag: 'van-field', name: 'tel', type: 'number', label: localePackage.form.tel.label[locale], placeholder: localePackage.form.tel.placeholder[locale], required: true },
         ]
       ]
     });
+    wx.showLoading({
+      title: GlobalLocalePackage.loading[locale],
+      mask: true
+    });
+    Promise.all([
+      promisfy.fetch(`/member/${ Store.getState().global.user.openid }`),
+      promisfy.fetch(`/antisocial/member_info?openid=${ Store.getState().global.user.openid }`)
+    ])
+      .then(res => {
+        let member = res[0];
+        let is_member = res[1].is_member;
+        let fill = autofiller(['email', 'name', 'tel'], member);
+        this.setData({
+          ['fields[0][1].value']: fill.email,
+          ['fields[0][2].value']: fill.name,
+          ['fields[0][3].value']: fill.tel,
+        });
+        if (is_member){
+          this.setData({
+            ['fields[0][0].value']: Store.getState().global.user.openid,
+          })
+        }
+      wx.hideLoading();
+      });
   },
   onSubmit: function ({ detail }) {
-    wx.navigateTo({
-      url: '/pages/antisocial-success/antisocial-success',
-    })
-    // wx.showLoading({ title: GlobalLocalePackage.loading[this.data.locale], mask: true });
-    // promisfy.post('/member/register', { ...detail, openid: Store.getState().global.user.openid })
-    //   .then(bundle => { 
-    //     wx.hideLoading();
-    //     this.setData({ bundle });
-    //     this.proceed(1);
-    //     return promisfy.requestPayment(bundle);
-    //   })
-    //   .then(() => {
-    //     wx.showLoading({ title: localePackage.transaction.verifying[this.data.locale], mask: true });
-    //     return new Promise((resolve) => { setTimeout(resolve, 3000) });
-    //   })
-    //   .then(() => {
-    //     return promisfy.fetch(`/member/${Store.getState().global.user.openid}`)
-    //   })
-    //   .then(member => {
-    //     wx.hideLoading();
-    //     if (member) {
-    //       this.proceed(2);
-    //       Store.dispatch(GlobalActions.updateMember(member));
-    //     } else {
-    //       this.proceed(0);
-    //       wx.showModal({
-    //         title: localePackage.fail.modal.title[this.data.locale],
-    //         content: localePackage.fail.modal.content[this.data.locale],
-    //         showCancel: false,
-    //         confirmColor: palette.primary
-    //       });
-    //     }
-    //   })
-    //   .catch(e => {
-    //     this.proceed(0);
-    //     e.errMsg ? wx.showToast({
-    //       title: localePackage.fail.toast.payment[this.data.locale],
-    //       icon: 'none'
-    //     }) : wx.showToast({
-    //       title: localePackage.fail.toast.unexpected[this.data.locale],
-    //       icon: 'none'
-    //     });
-    //   });
+    wx.showLoading({ title: GlobalLocalePackage.loading[this.data.locale] });
+    promisfy.post('/antisocial/apply', { ...detail })
+      .then(data => {
+        var applied = data.applied;
+        if (applied){
+          wx.navigateTo({
+            url: '/pages/antisocial-fail/antisocial-fail'
+          });
+        }
+        else {
+          var applyResult = JSON.stringify(data);
+          wx.hideLoading();
+          wx.navigateTo({
+            url: '/pages/antisocial-success/antisocial-success?applyResult=' + applyResult,
+          });
+        }
+      });
   },
-  
 })

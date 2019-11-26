@@ -8,13 +8,9 @@ export const form = {
     label: ['Email', 'Email'],
     placeholder: ['请输入邮箱', 'example@email.com']
   },
-  lastname: {
-    label: ['姓', 'Last Name'],
-    placeholder: ['请输入Last Name', 'Li']
-  },
-  firstname: {
-    label: ['名', 'First Name'],
-    placeholder: ['请输入First Name', 'Ming']
+  name: {
+    label: ['姓名', 'Name'],
+    placeholder: ['请输入姓名', 'Ming Li']
   },
   tel: {
     label: ['电话号', 'Telephon Number'],

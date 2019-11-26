@@ -1,0 +1,64 @@
+/* pages/antisocial-fail/antisocial-fail.wxss */
+@import '/assets/stylesheets/weui.wxss';
+
+.fail-info{
+    display: flex;
+    margin-top: 15%;
+}
+
+.fail-text-wrapper{
+    display:flex;
+}
+
+.fail-icon{
+    width: 12%;
+    margin-right: 3%;
+}
+
+.fail-text{
+    flex:1;
+    font-family: Microsoft YaHei;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 85px;
+    text-align: center;
+    color: #D1213E;
+}
+
+.meta-wrapper{
+    display: flex;
+}
+
+.meta{
+    width:60%;
+    font-family: Microsoft YaHei;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #6A6A6A;
+}
+
+.form-button-wrapper{
+    display: flex;
+}
+
+.button{
+    width: 40%;
+    margin-top: 10%;
+    background-color: #D1213E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 38px;
+    color: white;
+}
+
+.weui-footer{
+    margin-top: 10%;
+}
+
+button{
+    background-color: #fafafa;
+    border: none;
+}

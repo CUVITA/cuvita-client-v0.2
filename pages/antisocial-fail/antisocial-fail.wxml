@@ -1,0 +1,22 @@
+<view class="fail-info justify-content-center align-items-center">
+    <image src="{{src.fail_icon}}" class="fail-icon" mode="widthFix"/>
+    <view class="fail-text-wrapper">
+        <text class="fail-text">已抽签 请勿重复抽签</text> 
+    </view> 
+</view> 
+<view class="meta-wrapper justify-content-center">
+    <view class="meta d-flex-column justify-content-center">
+        <text>
+            系统已将您的抽奖结果发送至抽奖时填写的邮箱。请在邮箱收件箱查看。感谢您的参与。如有疑问，请联系VITA客服。
+        </text>
+    </view>
+</view>
+<view class="form-button-wrapper justify-content-center">
+    <button class="button" bindtap="goToHomePage">返回首页</button>
+</view>
+<!-- 联系客服 -->
+<view class="weui-footer" style="padding-bottom: 34px">
+    <view class="weui-footer__links">
+      <button class="weui-footer__link contact" open-type="contact">{{ localePackage.customerService[locale] }}</button>
+    </view>
+</view>

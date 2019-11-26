@@ -23,8 +23,9 @@
     "pages/ticket/ticket",
     "pages/boxoffice/boxoffice",
     "pages/antisocial-main/antisocial-main",
-    "pages/antisocial-success/antisocial-success",
-    "pages/antisocial-register/antisocial-register"
+    "pages/antisocial-register/antisocial-register",
+    "pages/antisocial-fail/antisocial-fail",
+    "pages/antisocial-success/antisocial-success"
   ],
   "window": {
     "backgroundTextStyle": "light",

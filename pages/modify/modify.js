@@ -10,13 +10,10 @@ Page({
     localePackage
   },
   onLoad: function () {
-    console.log(localePackage);
     let { locale } = Store.getState().global;
     wx.setNavigationBarTitle({
       title: localePackage.title[Store.getState().global.locale]
     });
-    console.log("hahahah");
-    console.log(localePackage.name);
     this.setData({
       locale,
       fields: [
@@ -65,6 +62,7 @@ Page({
       });
   },
   onSubmit: function ({ detail }) {
+    console.log(detail);
     wx.showLoading({ title: GlobalLocalePackage.loading[this.data.locale] });
     promisfy.post('/member/modify', { ...detail, openid: Store.getState().global.user.openid })
       .then(data => {
