@@ -46,9 +46,9 @@ Page({
         let is_member = res[1].is_member;
         let fill = autofiller(['email', 'name', 'tel'], member);
         this.setData({
-          ['fields[0][1].value']: fill.email,
-          ['fields[0][2].value']: fill.name,
-          ['fields[0][3].value']: fill.tel,
+          ['fields[0][1].value']: fill.email.trim(),
+          ['fields[0][2].value']: fill.name.trim(),
+          ['fields[0][3].value']: fill.tel.trim(),
         });
         if (is_member){
           this.setData({
