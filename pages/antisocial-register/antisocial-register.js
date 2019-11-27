@@ -59,6 +59,7 @@ Page({
     wx.hideLoading();
   },
   onSubmit: function ({ detail }) {
+    detail.openid = Store.getState().global.user.openid
     wx.showLoading({ title: GlobalLocalePackage.loading[this.data.locale] });
     promisfy.post('/antisocial/apply', { ...detail })
       .then(data => {
