@@ -19,7 +19,7 @@
 <view class="meta-wrapper justify-content-center">
     <view class="meta d-flex-column justify-content-center">
         <text>
-            以上为您的签号。系统很快会为您所提供的Email中发送备份。在xxXX年XX月XX日时，我们将会给您发送Email通知您的抽签结果。 谢谢您的参与
+            以上数字为您的raffle number，此raffle number仅可在本次活动中有效使用一次，请务必妥善保管。如果您幸运中签，我们将会在2019年12月1日通过邮件的形式发送给您中签结果，感谢您对VITA Global的支持。
         </text>
     </view>
 </view>
