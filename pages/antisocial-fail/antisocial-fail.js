@@ -26,7 +26,7 @@ Page({
     });
   },
   goToHomePage:function(param){
-    wx.reLaunch({
+    wx.switchTab({
       url: '/pages/discovery/discovery',
     })
   }

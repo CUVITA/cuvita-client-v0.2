@@ -55,6 +55,23 @@ Component({
         [`value.${name}`]: detail
       });
     },
+    // TODO: HARD CODING for Antisocial push
+    onClickIcon() {
+      wx.showModal({
+        title: '会员ID',
+        content: 'VITA会员将获得两个抽奖码翻倍抽中几率，点击购买会员即刻加入VITA会员计划享受更多福利。非会员请填写000000获得一个抽奖码',
+        cancelText: '取消',
+        confirmText: '办理VITA',
+        confirmColor: '#D1213E',
+        success (res) {
+          if (res.confirm) {
+            wx.switchTab({
+              url: '/pages/vitae/vitae',
+            })
+          } 
+        }
+      })
+    },
     onSubmit: function ({ detail: { value } }) {
       let errors = {};
       for (let group of this.data.fields) {

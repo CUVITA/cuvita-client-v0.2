@@ -26,7 +26,7 @@ Page({
       locale,
       fields: [
         [
-          { tag: 'van-field', name: 'openid', type: 'text', label: localePackage.form.openid.label[locale], placeholder: localePackage.form.openid.placeholder[locale], required: true },
+          { tag: 'van-field', name: 'openid', type: 'text', label: localePackage.form.openid.label[locale], placeholder: localePackage.form.openid.placeholder[locale], icon: localePackage.form.openid.icon[locale], required: true },
           { tag: 'van-field', name: 'email', type: 'text', label: localePackage.form.email.label[locale], placeholder: localePackage.form.email.placeholder[locale], required: true , is: 'email'},
           { tag: 'van-field', name: 'name', type: 'text', label: localePackage.form.name.label[locale], placeholder: localePackage.form.name.placeholder[locale], required: true },
           { tag: 'van-field', name: 'tel', type: 'number', label: localePackage.form.tel.label[locale], placeholder: localePackage.form.tel.placeholder[locale], required: true },
@@ -55,8 +55,8 @@ Page({
             ['fields[0][0].value']: Store.getState().global.user.openid,
           })
         }
-      wx.hideLoading();
       });
+    wx.hideLoading();
   },
   onSubmit: function ({ detail }) {
     wx.showLoading({ title: GlobalLocalePackage.loading[this.data.locale] });
@@ -64,6 +64,7 @@ Page({
       .then(data => {
         var applied = data.applied;
         if (applied){
+          wx.hideLoading();
           wx.navigateTo({
             url: '/pages/antisocial-fail/antisocial-fail'
           });

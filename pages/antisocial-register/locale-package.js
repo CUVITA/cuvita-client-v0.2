@@ -2,7 +2,8 @@ export const title = ['确认信息', 'Confirm Info'];
 export const form = {
   openid: {
     label: ['会员ID', 'Member ID'],
-    placeholder: ['请输入会员ID', '123456789']
+    placeholder: ['请输入会员ID', '123456789'],
+    icon:['question-o', 'question-o']
   },
   email: {
     label: ['Email', 'Email'],

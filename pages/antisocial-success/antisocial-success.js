@@ -21,6 +21,11 @@ Page({
         lottery2:pad(lottery_number[1],LOTTERY_LENGTH)
       })
     }
+    else{
+      this.setData({
+        lottery1:pad(lottery_number[0],LOTTERY_LENGTH),
+      })
+    }
     let { locale } = Store.getState().global;
     wx.setNavigationBarTitle({
       title: localePackage.title[locale]
@@ -34,7 +39,7 @@ Page({
     });
   },
   goToHomePage:function(param){
-    wx.reLaunch({
+    wx.switchTab({
       url: '/pages/discovery/discovery',
     })
   }

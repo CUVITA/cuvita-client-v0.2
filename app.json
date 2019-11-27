@@ -23,8 +23,8 @@
     "pages/ticket/ticket",
     "pages/boxoffice/boxoffice",
     "pages/antisocial-main/antisocial-main",
-    "pages/antisocial-register/antisocial-register",
     "pages/antisocial-fail/antisocial-fail",
+    "pages/antisocial-register/antisocial-register",
     "pages/antisocial-success/antisocial-success"
   ],
   "window": {
