@@ -17,7 +17,7 @@
 .bg {
   /* height: 120vw; */
   height: 118vw;
-  background-color: #d1233e;
+    background-color: #d1233e; 
 }
 
 .bg-whitespace {
@@ -77,16 +77,17 @@
 }
 
 .bd-banner-header {
-  color: white;
+  color: black;
   font-size: 20pt;
   font-weight: bold;
 }
 
 .bd-banner-description {
-  color: white;
+  color: black;
   font-size: 14pt;
   white-space: normal;
   word-wrap: break-all;
+
 }
 
 .bd-content {

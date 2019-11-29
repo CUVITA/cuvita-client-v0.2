@@ -1,7 +1,7 @@
 <view class="success-info justify-content-center align-items-center">
     <image src="{{src.success_icon}}" class="success-icon" mode="widthFix"/>
     <view class="success-text-wrapper">
-        <text class="success-text">抽签成功！</text> 
+        <text class="success-text">派签成功！</text> 
     </view> 
 </view> 
 <view wx:if="{{twonumber}}">

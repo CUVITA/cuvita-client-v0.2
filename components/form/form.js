@@ -59,7 +59,7 @@ Component({
     onClickIcon() {
       wx.showModal({
         title: '会员ID',
-        content: 'VITA会员将获得两个抽奖码翻倍抽中几率，点击购买会员即刻加入VITA会员计划享受更多福利。非会员请填写000000获得一个抽奖码',
+        content: 'VITA会员将获得两个抽奖码翻倍抽中几率，点击购买会员即刻加入VITA会员计划享受更多福利。非会员请填写666666获得一个抽奖码',
         cancelText: '取消',
         confirmText: '办理VITA',
         confirmColor: '#D1213E',

@@ -1,7 +1,7 @@
 <view class="fail-info justify-content-center align-items-center">
     <image src="{{src.fail_icon}}" class="fail-icon" mode="widthFix"/>
     <view class="fail-text-wrapper">
-        <text class="fail-text">已抽签 请勿重复抽签</text> 
+        <text class="fail-text">已派签 请勿重复抽签</text> 
     </view> 
 </view> 
 <view class="meta-wrapper justify-content-center">

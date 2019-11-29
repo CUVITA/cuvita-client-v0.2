@@ -46,7 +46,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
-    line-height: 17px;
+    line-height: 22px;
     text-align: center;
     color: #6A6A6A;
 }
