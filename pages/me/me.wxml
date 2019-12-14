@@ -18,7 +18,9 @@
     <van-cell title="{{ localePackage.tickets[locale] }}" icon="label" is-link />
   </van-cell-group>
   <label class="body-cell-group-title">{{ localePackage.settings[locale] }}</label>
-  <van-collapse custom-class="body-cell-group" value="{{ currentSetting }}" bind:change="onChange" accordion border="{{ false }}">
+
+  <van-collapse custom-class="body-cell-group" value="{{ currentSetting }}" bind:change="onChange" border="{{ false }}">
+    
     <van-collapse-item title="{{ localePackage.locale[locale] }}" icon="chat" name="locale">
       <van-radio-group value="{{ options.locale[locale] }}">
         <van-cell-group border="{{ false }}">
@@ -31,7 +33,16 @@
         </van-cell-group>
       </van-radio-group>
     </van-collapse-item>
+   
+   <van-collapse-item title="{{ localePackage.region[locale] }}" icon="map-marked" name="region">
+      <van-cell-group border="{{ false }}">
+        <van-cell title="{{ localePackage.currLocation[locale] }}" value="{{ region.name[locale] }}"/>
+        <van-cell title="{{ localePackage.setLocation[locale] }}" is-link url="/pages/region/region" border="{{ false }}"/>
+      </van-cell-group>
+    </van-collapse-item>
+  
   </van-collapse>
+  
   <label class="body-cell-group-title">{{ localePackage.others[locale] }}</label>
   <van-cell-group custom-class="body-cell-group" border="{{ false }}">
     <van-cell title="{{ localePackage.license[locale] }}" icon="info-o" is-link url="/pages/license/license" />
