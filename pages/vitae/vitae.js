@@ -21,7 +21,7 @@ Page({
       systemInfo, member, locale
     });
     this.unsubscribe = Store.subscribe(() => {
-      mapStateToPage(Store, this, { member: 'global.member' });
+      mapStateToPage(Store, this, { locale: 'global.locale', member: 'global.member' });
     });
   },
   onShow: function () {

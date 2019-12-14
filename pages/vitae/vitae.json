@@ -2,7 +2,8 @@
   "usingComponents": {
     "landing": "components/landing/landing",
     "credit": "components/credit/credit",
-    "dashboard": "components/dashboard/dashboard"
+    "dashboard": "components/dashboard/dashboard",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index"
   },
   "navigationBarTitleText": "",
   "enablePullDownRefresh": true

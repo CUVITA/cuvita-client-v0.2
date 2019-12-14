@@ -22,9 +22,18 @@ App({
     Store.dispatch(GlobalActions.setLocale(wx.getStorageSync('locale') || 0));
     Store.dispatch(GlobalActions.setMember(wx.getStorageSync('member') || null));
     promisfy.login()
+
+      // Development (隐藏识别会员所需信息)
+      // .then(code => promisfy.fetch(`/dispatch/${ code }`))
+      // .then(({ user, member }) => {
+      //   Store.dispatch(GlobalActions.setUser(user));
+      //   member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
+      //   wx.hideLoading();
+      // });
+
       .then(code => promisfy.fetch(`/dispatch/${ code }`))
-      .then(({ user, member }) => {
-        Store.dispatch(GlobalActions.setUser(user));
+      .then(({ openid, user, member }) => {
+        Store.dispatch(GlobalActions.setUser({openid, ...user}));
         member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
         wx.hideLoading();
       });
