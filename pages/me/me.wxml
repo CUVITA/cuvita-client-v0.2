@@ -15,6 +15,7 @@
   <!-- BASE -->
   <label class="body-cell-group-title">{{ localePackage.mine[locale] }}</label>
   <van-cell-group custom-class="body-cell-group" border="{{ false }}">
+    <van-cell title="{{ localePackage.myInfo[locale] }}" is-link url="/pages/modify/modify" icon="manager"/>
     <van-cell title="{{ localePackage.tickets[locale] }}" icon="label" is-link />
   </van-cell-group>
   <label class="body-cell-group-title">{{ localePackage.settings[locale] }}</label>

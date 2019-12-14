@@ -11,3 +11,4 @@ export const customerService = ['联系客服', 'Customer Services'];
 export const region = ['地区', 'Region'];
 export const currLocation = ['当前地区', 'Current Location']
 export const setLocation = ['设置地区', 'Change Location']
+export const myInfo = ['我的信息', 'Account Detail']
