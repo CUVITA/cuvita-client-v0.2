@@ -55,8 +55,8 @@
 
 .card-body {
   position: absolute;
-  height: 50vw;
-  width: 80vw;
+  height: 45vw;
+  width: 72vw;
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -80,3 +80,18 @@
 image {
   padding-bottom: 28px;
 }
+
+.meta {
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  text-align: center;
+}
+
+.meta label{
+  font: 10pt GurmukhiMN-Bold;
+  color: white;
+}
+
+

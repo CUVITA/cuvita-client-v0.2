@@ -15,6 +15,7 @@ Page({
   },
   onLoad: function () {
     let { locale, systemInfo, member, region } = Store.getState().global;
+    console.log(region);
     this.setData({
       locale, systemInfo, member, region
     });

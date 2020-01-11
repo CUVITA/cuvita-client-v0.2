@@ -10,99 +10,98 @@
 */
 
 .bg-enclosure {
-  position: absolute;
-  z-index: -1;
+    position: absolute;
+    z-index: -1;
 }
 
 .bg {
-  /* height: 120vw; */
-  height: 118vw;
-  background-color: #d1233e;
+    /* height: 120vw; */
+    height: 118vw;
+    background-color: #d1233e;
 }
 
 .bg-whitespace {
-  height: calc(100vh - 120vw);
+    height: calc(100vh - 120vw);
 }
 
 .bd-enclosure {
-  position: absolute;
-  z-index: 0;
-  white-space: nowrap;
+    position: absolute;
+    z-index: 0;
+    white-space: nowrap;
 }
 
 .bd-banner {
-  position: absolute;
-  top: 0;
-  /* height: 80vw; */
-  height: 78vw;
-  z-index: 0;
-  box-sizing: border-box;
-
+    position: absolute;
+    top: 0;
+    /* height: 80vw; */
+    height: 78vw;
+    z-index: 0;
+    box-sizing: border-box;
 }
 
 .bd-banner-overlay {
-  position: absolute;
-  top: 0;
-  /* height: 80vw; */
-  height: 78vw;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    /* height: 80vw; */
+    height: 78vw;
+    z-index: 1;
 }
 
 .bd-content {
-  position: absolute;
-  /* top: 80vw; */
-  top: 78vw;
+    position: absolute;
+    /* top: 80vw; */
+    top: 78vw;
 }
 
 .section-info {
-  box-sizing: border-box;
-  padding: 0 15px;
+    box-sizing: border-box;
+    padding: 0 15px;
 }
 
 .section-info-title {
-  font-weight: bold;
-  font-size: 14pt;
-  text-transform: uppercase;
-  color: #2b2b2b;
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    color: #2b2b2b;
 }
 
 .section-info-description {
-  text-transform: uppercase;
-  color: #888;
+    text-transform: uppercase;
+    color: #888;
 }
 
 .section-info-description-hover {
-  -webkit-transform: translateX(3px);
-  transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
 }
 
 .bd-banner-header {
-  color: white;
-  font-size: 20pt;
-  font-weight: bold;
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
 }
 
 .bd-banner-description {
-  color: white;
-  font-size: 14pt;
-  white-space: normal;
-  word-wrap: break-all;
+    color: white;
+    font-size: 14pt;
+    white-space: normal;
+    word-wrap: break-all;
 }
 
 .bd-content {
-  box-sizing: border-box;
-  padding-top: calc(15vw + 5px);
+    box-sizing: border-box;
+    padding-top: calc(15vw + 5px);
 }
 
 .nav-enclosure {
-  position: fixed;
-  top: 0;
-  z-index: 99;
-  transition: height 0.1s linear;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transition: height 0.1s linear;
 }
 
 .nav {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* .nav-search {
@@ -112,19 +111,19 @@
 } */
 
 .nav-title {
-  color: white;
-  font-weight: bold; 
+    color: white;
+    font-weight: bold;
 }
 
 .nav-region-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: white;
-  font-size: 11pt;
-  text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: 11pt;
+    text-transform: uppercase;
 }
 
 .nav-action-hover {
-  -webkit-transform: translateX(3px);
-  transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
 }

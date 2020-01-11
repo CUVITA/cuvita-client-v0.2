@@ -12,3 +12,4 @@ export const implement = {
   confirm: ['前往填写', 'Go']
 }
 export const disclaimer = ['绑定或注册代表您已阅读并同意隐私协议和用户协议', 'Login or register represents your consent to our Privacy Policy and EULA'];
+export const reminder = ['温馨提示：长按生成VITA会员二维码', 'Long Press Card to Show Your QRCode']

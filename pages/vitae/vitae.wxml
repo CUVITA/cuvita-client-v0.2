@@ -7,6 +7,7 @@
         <image class="card-icon" src="/assets/images/logo.png" mode="aspectFit" />
         <view class="card-label d-flex-column align-items-center justify-content-center"><label style="color: {{ palette.font[schema] }}">VITA</label></view>
       </view>
+      <view class="meta d-flex-column align-items-center justify-content-end"><label>{{localePackage.reminder[locale]}}</label></view>
     </view>
   </view>
   <view class="body fw">
