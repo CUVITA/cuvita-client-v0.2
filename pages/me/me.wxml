@@ -7,9 +7,6 @@
       <open-data class="user-info-region" type="userCity" />
     </view>
   </view>
-  <view class="fh d-flex-row align-items-center">
-    <van-icon name="arrow" custom-class="d-flex-row align-items-center" color="white" />
-  </view>
 </navigator>
 <view class="body fw">
   <!-- BASE -->
