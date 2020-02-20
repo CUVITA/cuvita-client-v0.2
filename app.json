@@ -21,7 +21,8 @@
     "pages/consulting/consulting",
     "pages/job/job",
     "pages/ticket/ticket",
-    "pages/boxoffice/boxoffice"
+    "pages/boxoffice/boxoffice",
+    "pages/concierge-landing/concierge-landing"
   ],
   "window": {
     "backgroundTextStyle": "light",
