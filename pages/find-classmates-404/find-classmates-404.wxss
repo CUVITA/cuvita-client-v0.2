@@ -1,0 +1,35 @@
+.background {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.textContainer {
+    position: relative;
+    z-index: 1;
+    margin-top: 55%;
+    width: 90%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0 0 5px #b2b2b2b2;
+}
+
+.Msg {
+    margin-top: 7%;
+    font-size: 18px;
+}
+
+button {
+    background-color: white;
+    color: blue;
+    border: none !important;
+    font-size: 14px;
+    height: 10%;
+    margin-bottom: 7%;
+}
+
+button::after {
+    border: none !important;
+}

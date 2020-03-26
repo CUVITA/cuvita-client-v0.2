@@ -1,0 +1,13 @@
+<view class="background fvw fvh">
+  <image class="fw fh" src="https://vitaminiprogram.s3-us-west-1.amazonaws.com/Geisel3.jpg" mode="aspectFill" />
+</view>
+<view class="fw fh container d-flex-column align-items-center justify-content-center">
+  <view class="textContainer align-items-center d-flex-column justify-content-center">
+    <p class="Msg">抱歉没有找到您所输入的课程</p>
+    <button class="weui-footer__link contact" open-type="contact">联系客服</button>
+  </view>
+</view>
+
+
+
+

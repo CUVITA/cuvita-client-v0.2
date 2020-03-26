@@ -1,70 +1,75 @@
 {
-  "pages": [
-    "pages/discovery/discovery",
-    "pages/vitae/vitae",
-    "pages/me/me",
-    "pages/vendor-list/vendor-list",
-    "pages/vendor-detail/vendor-detail",
-    "pages/link/link",
-    "pages/license/license",
-    "pages/register/register",
-    "pages/article-detail/article-detail",
-    "pages/article-list/article-list",
-    "pages/modify/modify",
-    "pages/qrcode/qrcode",
-    "pages/auto-list/auto-list",
-    "pages/auto-detail/auto-detail",
-    "pages/finance/finance",
-    "pages/insurance/insurance",
-    "pages/region/region",
-    "pages/communication/communication",
-    "pages/consulting/consulting",
-    "pages/job/job",
-    "pages/ticket/ticket",
-    "pages/boxoffice/boxoffice",
-    "pages/concierge-landing/concierge-landing"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#d1233e",
-    "navigationBarTitleText": "CUVita",
-    "navigationBarTextStyle": "white",
-    "backgroundColorTop": "#d1233e",
-    "backgroundColorBottom": "#fafafa"
-  },
-  "tabBar": {
-    "color": "#2b2b2b",
-    "selectedColor": "#d1233e",
-    "backgroundColor": "#f6f6f6",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/discovery/discovery",
-        "text": "发现",
-        "iconPath": "/assets/icons/tab-discovery-ia.png",
-        "selectedIconPath": "/assets/icons/tab-discovery-a.png"
-      },
-      {
-        "pagePath": "pages/vitae/vitae",
-        "text": "VITA",
-        "iconPath": "/assets/icons/tab-vitae-ia.png",
-        "selectedIconPath": "/assets/icons/tab-vitae-a.png"
-      },
-      {
-        "pagePath": "pages/me/me",
-        "text": "我",
-        "iconPath": "/assets/icons/tab-me-ia.png",
-        "selectedIconPath": "/assets/icons/tab-me-a.png"
-      }
-    ]
-  },
-  "usingComponents": {
-    "van-search": "miniprogram_npm/vant-weapp/search/index"
-  },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "你的位置信息将用于提供个性化的推荐"
-    }
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/discovery/discovery",
+        "pages/vitae/vitae",
+        "pages/me/me",
+        "pages/vendor-list/vendor-list",
+        "pages/vendor-detail/vendor-detail",
+        "pages/link/link",
+        "pages/license/license",
+        "pages/register/register",
+        "pages/article-detail/article-detail",
+        "pages/article-list/article-list",
+        "pages/modify/modify",
+        "pages/qrcode/qrcode",
+        "pages/auto-list/auto-list",
+        "pages/auto-detail/auto-detail",
+        "pages/finance/finance",
+        "pages/insurance/insurance",
+        "pages/region/region",
+        "pages/communication/communication",
+        "pages/consulting/consulting",
+        "pages/job/job",
+        "pages/ticket/ticket",
+        "pages/boxoffice/boxoffice",
+        "pages/concierge-landing/concierge-landing",
+        "pages/find-classmates/find-classmates",
+        "pages/find-classmates-404/find-classmates-404",
+        "pages/find-classmates-success/find-classmates-success"
+
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#d1233e",
+        "navigationBarTitleText": "CUVita",
+        "navigationBarTextStyle": "white",
+        "backgroundColorTop": "#d1233e",
+        "backgroundColorBottom": "#fafafa"
+    },
+    "tabBar": {
+        "color": "#2b2b2b",
+        "selectedColor": "#d1233e",
+        "backgroundColor": "#f6f6f6",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/discovery/discovery",
+                "text": "发现",
+                "iconPath": "/assets/icons/tab-discovery-ia.png",
+                "selectedIconPath": "/assets/icons/tab-discovery-a.png"
+            },
+            {
+                "pagePath": "pages/vitae/vitae",
+                "text": "VITA",
+                "iconPath": "/assets/icons/tab-vitae-ia.png",
+                "selectedIconPath": "/assets/icons/tab-vitae-a.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我",
+                "iconPath": "/assets/icons/tab-me-ia.png",
+                "selectedIconPath": "/assets/icons/tab-me-a.png"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-search": "miniprogram_npm/vant-weapp/search/index"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于提供个性化的推荐"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,23 @@
+<view class="background fvw fvh">
+  <image class="fw fh" src="https://vitaminiprogram.s3-us-west-1.amazonaws.com/Geisel3.jpg" mode="aspectFill" />
+</view>
+<view class="searchBarContainern fw fh container d-flex-column align-items-center justify-content-center">
+  <view class="searchBar">
+    <van-search 
+    field-class=""
+    class="searchField" 
+    value="{{ value }}"
+    placeholder="输入课程编号 空格大小写不限" 
+    show-action 
+    placeholder-style="color: black" 
+    background="#484243" 
+    use-action-slot 
+    bind:change="onChange" 
+    bind:search="onSearch">
+      <view slot="action" bind:tap="onClick" class="searchBtn">搜索</view>
+    </van-search>
+    <van-toast id="van-toast" />
+  </view>
+</view>
+
+

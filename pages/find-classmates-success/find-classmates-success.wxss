@@ -1,0 +1,45 @@
+.topPromptContainer {
+    margin-top: 5%;
+}
+
+.promptText {
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.qrCodeImg {
+    position: relative;
+    width: 85%;
+}
+.qrcodeContainer {
+    margin-top: 3%;
+}
+
+.bottomPromptContainer {
+    margin-top: 3%;
+}
+
+.logoImg {
+    position: relative;
+    width: 22%;
+    opacity: 0.3;
+    margin-left: 80%;
+}
+
+button {
+    margin-top: 1%;
+    font-size: 14px;
+    color: #8d92a3;
+    background-color: #fafafa;
+}
+
+button::after {
+    border: none;
+}
+
+.bottomText {
+    color: #d70000;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+}

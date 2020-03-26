@@ -24,18 +24,18 @@ App({
     promisfy.login()
 
       // Development (隐藏识别会员所需信息)
-      // .then(code => promisfy.fetch(`/dispatch/${ code }`))
-      // .then(({ user, member }) => {
-      //   Store.dispatch(GlobalActions.setUser(user));
-      //   member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
-      //   wx.hideLoading();
-      // });
-
       .then(code => promisfy.fetch(`/dispatch/${ code }`))
-      .then(({ openid, user, member }) => {
-        Store.dispatch(GlobalActions.setUser({openid, ...user}));
+      .then(({ user, member }) => {
+        Store.dispatch(GlobalActions.setUser(user));
         member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
         wx.hideLoading();
       });
+
+      // .then(code => promisfy.fetch(`/dispatch/${ code }`))
+      // .then(({ openid, user, member }) => {
+      //   Store.dispatch(GlobalActions.setUser({openid, ...user}));
+      //   member ? Store.dispatch(GlobalActions.updateMember(member)) : Store.getState().global.member && Store.dispatch(GlobalActions.purgeMember());
+      //   wx.hideLoading();
+      // });
   }
 })
