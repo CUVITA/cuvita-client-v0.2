@@ -1,6 +1,6 @@
 <view class="topPromptContainer fw fh container d-flex-column align-items-center justify-content-center" >
-  <p class="promptText">请截图下方二维码，扫描进群</p>
-  <p class="promptText">将课友群二维码分享给更多的课友们</p>
+  <p class="promptText">请截图下方二维码， 添加课友群助手</p>
+  <p class="promptText">将课友群助手码分享给更多的课友们</p>
 </view>
 
 <view class="qrcodeContainer fw fh container align-items-center d-flex-column justify-content-center" >
@@ -9,7 +9,7 @@
 
 <view class="bottomPromptContainer fw fh container align-items-center d-flex-column justify-content-center">
   <p class="bottomText">温馨提示：</p>
-  <p class="bottomText">点击左上方返回课友群搜索加入更多课友群</p>
+  <p class="bottomText">联系课友群助手进入课友群（课程群 e.g Spring CSE8A）</p>
   <p class="bottomText">如出现二维码失效，请点击下方联系VITA客服</p>
   <button class="weui-footer__link contact" open-type="contact">联系客服</button>
 
